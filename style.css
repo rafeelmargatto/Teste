@@ -1,0 +1,217 @@
+/* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #eef2f5 0%, #dbe3eb 50%, #c4d3e0 100%);
+    color: #2c3e50;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Bolas decorativas de fundo */
+.bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+}
+
+.circle-1 {
+    width: 300px;
+    height: 300px;
+    background: rgba(74, 107, 130, 0.25);
+    top: -50px;
+    left: -50px;
+}
+
+.circle-2 {
+    width: 350px;
+    height: 350px;
+    background: rgba(44, 83, 100, 0.2);
+    bottom: -80px;
+    right: -80px;
+}
+
+/* Conteúdo principal centralizado */
+.container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 480px;
+    width: 100%;
+}
+
+/* Cabeçalho e Título */
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.badge {
+    background: #2c5364;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #1a2a3a;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #5a6b7c;
+}
+
+/* Card do Produto */
+.product-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.discount-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e74c3c;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+/* Imagem Centralizada */
+.image-wrapper {
+    width: 100%;
+    height: 260px;
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .image-wrapper img {
+    transform: scale(1.08);
+}
+
+/* Informações do Produto */
+.rating {
+    color: #f1c40f;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.rating span {
+    color: #7f8c8d;
+    font-size: 0.8rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+.price-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.price-old {
+    text-decoration: line-through;
+    color: #95a5a6;
+    font-size: 0.95rem;
+}
+
+.price-current {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c5364;
+}
+
+/* Botão de Compra */
+.buy-button {
+    width: 100%;
+    background: linear-gradient(135deg, #2c5364 0%, #0f2027 100%);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.buy-button:hover {
+    opacity: 0.95;
+    transform: scale(1.02);
+}
+
+/* Ícones de Garantia */
+.features {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 25px;
+    padding: 0 10px;
+}
+
+.feature-item {
+    font-size: 0.8rem;
+    color: #5a6b7c;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+}
